@@ -1,2 +1,3 @@
 https://portraptor.johanpaul.net/2014/12/characterswordsnumber-counter-by-monkey.html
 https://developers.google.com/speed/libraries
+http://thor.johanpaul.net/webby/base64-converter
