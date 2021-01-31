@@ -75,29 +75,34 @@
     </script>
   </head>
 
-  <body>
-    <noscript>This application needs JavaScript</noscript>
-
-
-
+  <body><noscript>
+      <div style=text-align:center;font-size:24px;color:brown;margin-top:20px;> This application needs JavaScript <style>
+        .dilly {
+          display: none
+        }
+        </style>
+      </div>
+    </noscript>
+    <div class=dilly>
+      <h1 class=wrapped id=title_top>ANY FILE to Base64</h1>
       <p class="ms note_result" id=note_result><span id=note class=sbg></span></p>
       <div class="sub_title ms" id=sub_title></div>
+      <div id=result class=res></div>
+      <div class=all_wrapper>
+        <div class="ib input_file_wrap" id=input_file_wrap>
+          <div class="pm0 ms file-holder" id=file-holder-outer>
+            <div class id=file-holder-inner> <input tabindex=0 type=file id=inp class="ms transparent inp"> </div>
+          </div>
+        </div>
 
 
-      <input tabindex=0 type=file id=inp class="ms transparent inp">
+        <div id=clearer class=dnon> <button type=button class="pure-button button-warning resetClear">Clear</button> </div>
+        <div class=inner_holder> <textarea rows=1 id=output_url class="URI_textarea ms" readonly></textarea>
+          <div class="ib mt10"> <button type=button class="pure-button pure-button-primary" id=selector>Select</button> <button type=button class="pure-button button-warning resetClear">Clear</button> </div>
+        </div>
+      </div>
 
-
-
-<button type=button class="pure-button button-warning resetClear">Clear</button>
-
-<textarea rows=1 id=output_url class="URI_textarea ms" readonly></textarea>
-
-
-
-<button type=button class="pure-button pure-button-primary" id=selector>Select</button> <button type=button class="pure-button button-warning resetClear">Clear</button>
-
-
-
+    </div>
   </body>
 
 <script>
