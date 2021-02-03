@@ -122,7 +122,5 @@ body>p:first-child {
   overflow: auto;
   color: #000;
   height: 300px;
-  box-sizing: border-box;
-  font-family: monospace;
-  font-size: 80%;
+  box-sizing: border-box
 }
