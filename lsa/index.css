@@ -16,3 +16,27 @@
   height: 300px;
   box-sizing: border-box
 }
+ul,
+ol {
+  font-size: 1.125rem;
+  line-height: 1.77778;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  color: #555555
+}
+ul a,
+ol a {
+  color: #3863d9;
+}
+ul code,
+
+ol code {
+  display: inline-block;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+  font-size: 14px
+}
