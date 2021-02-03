@@ -175,7 +175,7 @@ function printR(a) {
       output_left = convert(v)[1];
     }
     output_right = convert(v)[0];
-    out_buff.push("<li><a href='https://kbbi.kemdikbud.go.id/entri/" + output_left + "' target='_blank'>" + output_left + "</a> <span style='color:royalblue'>(" +
+    out_buff.push("<li><a href='https://kbbi.kemdikbud.go.id/entri/" + output_left + "' target='_blank'>" + output_left + "</a> <span class='number'>(" +
       output_right + ")</span></li>");
   });
   li.innerHTML += out_buff.join("");
@@ -203,7 +203,7 @@ function worda() {
     });
     array = array.sort(sortnumber);
     printR(array);
-    li.innerHTML += "<hr>Total: <span style='color:royalblue'>" +
+    li.innerHTML += "<hr>Total: <span class='number'>" +
       total + "</span>";
     out.value = total;
     finish = dat();
