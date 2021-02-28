@@ -1,3 +1,7 @@
+function AvoidSpace(event) {
+    var k = event ? event.which : window.event.keyCode;
+    if (k == 32) return false;
+};
 var google = document.getElementById('google');
 var json = document.getElementById('json');
 var result = document.getElementById('yaml');
@@ -23,7 +27,7 @@ if (window.location.search) {
   var ylead = "lead: ";
   var yslug = "slug: ";
   var yend = "...";
-  var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yslug + slug + yend;
+  var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yslug + slug + br + yend;
   var yamlresult = yreplace.replace(/\+/g, ' ');
   var mtitle = '&lt;title&gt;' + title + '&lt;/title&gt;';
   var mdescription = '&lt;meta ' + 'content="' + description + '"' + ' name="description">';

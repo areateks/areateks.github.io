@@ -74,7 +74,7 @@
         <p><label for="lead">Lead</label></p>
         <p><textarea id="lead" type="text" name="lead" placeholder="lead" autofocus="" autocomplete="off" rows="5" minlength="50" maxlength="160" required=""></textarea></p>
         <p><label for="Slug">Slug</label></p>
-        <p><input id="slug" type="text" name="slug" placeholder="slug" autofocus="" autocomplete="off" required="" minlength="50" maxlength="60" required="" onkeypress="return event.charCode != 32"></p>
+        <p><input id="slug" type="text" name="slug" placeholder="slug" autofocus="" autocomplete="off" required="" minlength="50" maxlength="60" required="" onkeypress="return AvoidSpace(event)"></p>
         <p><button type="submit">Buat</button> <button type="reset">Reset</button></p>
       </form>
 
