@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
   </head>
   <body>
-    <header id="header">
+    <header>
       <h1>Areateks</h1>
     </header>
     <main id="content">
@@ -21,16 +21,6 @@
     <footer>
       <p>&copy; 2020 <a href="/">Nashrullah Ali Fauzi</a></p>
     </footer>
-    <script src="/f3h.min.js"></script>
-    <script>
-    const f3h = new F3H;
-    const content = document.querySelector('#content');
-    f3h.on('success', response => {
-      document.title = response.title;
-      content.innerHTML = response.querySelector('#content').innerHTML;
-      delete f3h.scripts['q2o', 'qtoo', "header"];
-    });
-    </script>
 
   </body>
 </html>
