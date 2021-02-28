@@ -29,7 +29,7 @@
     <main>
       <p><button id='dl-md'>Download Markdown (*.md)</button>
         <button class='btn' data-clipboard-target='#md > textarea'>Copy Markdown</button></p>
-      <p id='md'><textarea placeholder='Paste Markdown code and enter to parse…'></textarea></p>
+      <p id='md'><textarea placeholder='Paste Markdown code and enter to parse…' rows="10"></textarea></p>
       <details>
         <summary>Options</summary>
         <p><label><input checked='' id='toPurify' type='checkbox' />
@@ -38,7 +38,7 @@
       <p><button id='dl-html'>Download Raw HTML (*.html)</button>
         <button id='txt-html'>Download Raw HTML as TXT (*.txt)</button>
         <button class='btn' data-clipboard-target='#html > textarea'>Copy Raw HTML</button></p>
-      <p id='html'><textarea placeholder='HTML code will be result…' readonly=''></textarea></p>
+      <p id='html'><textarea placeholder='HTML code will be result…' readonly='' rows="10"></textarea></p>
       <p><button id='render'>Render</button></p>
       <section>Rendering HTML will be result&#8230;</section>
     </main>
