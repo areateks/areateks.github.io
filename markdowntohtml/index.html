@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta content='#000' name='theme-color'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='Paste your Markdown code into the textarea below, and copy a raw HTML file to start the code.' name='description' />
+    <title>Marktextarea</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+  </head>
+
+  <body>
+    <p>Do you like this project? Please <a href='https://paypal.me/nashrullahalifauzi' target='_blank'>support me</a>. Thank you!</p>
+    <header>
+      <h1>Marktextarea</h1>
+      <p>Paste your Markdown code into the textarea below, and copy a raw HTML file to start the code.</p>
+      <p>A tool for semantic writing code by <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a>.</p>
+      <hr />
+    </header>
+    <main>
+      <p><button id='dl-md'>Download Markdown (*.md)</button>
+        <button class='btn' data-clipboard-target='#md > textarea'>Copy Markdown</button></p>
+      <p id='md'><textarea placeholder='Paste Markdown code and enter to parse…'></textarea></p>
+      <details>
+        <summary>Options</summary>
+        <p><label><input checked='' id='toPurify' type='checkbox' />
+            <span>Purify</span></label></p>
+      </details>
+      <p><button id='dl-html'>Download Raw HTML (*.html)</button>
+        <button id='txt-html'>Download Raw HTML as TXT (*.txt)</button>
+        <button class='btn' data-clipboard-target='#html > textarea'>Copy Raw HTML</button></p>
+      <p id='html'><textarea placeholder='HTML code will be result…' readonly=''></textarea></p>
+      <p><button id='render'>Render</button></p>
+      <section>Rendering HTML will be result&#8230;</section>
+    </main>
+    <footer>
+      <hr />
+      <p>&#169; 2021 <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a></p>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://clipboardjs.com/dist/clipboard.min.js'></script>
+    <script>
+    function md2html() {
+      var t = $("#md > textarea"),
+        e = $("#html > textarea"),
+        n = marked(t.val());
+      document.getElementById("toPurify").checked ? e.val(DOMPurify.sanitize(n)) : e.val(n)
+    }
+
+    function downloadFile(t, e, n) {
+      n = n || "text/plain";
+      var a = new Blob([e], {
+          type: n
+        }),
+        o = document.createElement("a");
+      o.download = t, o.href = window.URL.createObjectURL(a), o.onclick = function(t) {
+        var e = this;
+        setTimeout(function() {
+          window.URL.revokeObjectURL(e.href)
+        }, 1500)
+      }, document.body.appendChild(o), o.click(), document.body.removeChild(o), o.remove()
+    }
+    new ClipboardJS(".btn"), $(document).on("keyup", "#md > textarea", md2html), $(document).on("change", "#toPurify", md2html), $(document).on("click", "#dl-md", function() {
+      downloadFile("marktextarea.md", $("#md > textarea").val(), "text/markdown")
+    }), $(document).on("click", "#dl-html", function() {
+      downloadFile("marktextarea.html", $("#html > textarea").val(), "text/html")
+    }), $(document).on("click", "#txt-html", function() {
+      downloadFile("marktextarea.txt", $("#html > textarea").val(), "application/msword")
+    }), $(document).on("click", "#render", function() {
+      var t = $("#html > textarea");
+      $("section").html(t.val())
+    });
+    </script>
+  </body>
+
+</html>
