@@ -12,9 +12,7 @@ if (window.location.search) {
   var header = config.header;
   var author = config.author;
   var lead = config.lead;
-  var slugr = config.slug;
-  var slugres = slugr.replace(/\+/g, '-');
-  var slug = slugr;
+  var slug = config.slug;
   var br = "<br>";
   var ystart = "---";
   var ytitle = "title: ";
