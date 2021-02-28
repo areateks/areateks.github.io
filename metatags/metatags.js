@@ -23,7 +23,7 @@ if (window.location.search) {
   var ylead = "lead: ";
   var yslug = "slug: ";
   var yend = "...";
-  var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yslug + slug yend;
+  var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yslug + slug + yend;
   var yamlresult = yreplace.replace(/\+/g, ' ');
   var mtitle = '&lt;title&gt;' + title + '&lt;/title&gt;';
   var mdescription = '&lt;meta ' + 'content="' + description + '"' + ' name="description">';
