@@ -74,7 +74,7 @@
         <p><label for="lead">Lead</label></p>
         <p><textarea id="lead" type="text" name="lead" placeholder="lead" autofocus="" autocomplete="off" rows="5" minlength="50" maxlength="160" required=""></textarea></p>
         <p><label for="Slug">Slug</label></p>
-        <p><input id="slug" type="text" name="slug" placeholder="slug" autofocus="" autocomplete="off" required="" minlength="50" maxlength="60" required=""></p>
+        <p><input id="slug" type="text" name="slug" placeholder="slug" autofocus="" autocomplete="off" required="" minlength="50" maxlength="60" required="" onkeypress="return event.charCode != 32"></p>
         <p><button type="submit">Buat</button> <button type="reset">Reset</button></p>
       </form>
 
@@ -99,7 +99,7 @@
     <footer>
       <p>&#169; 2021 <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a></p>
     </footer>
-    <script src="./metatags.js"></script>
+    <script src="./metatags.js?v=1"></script>
   </body>
 
 </html>
