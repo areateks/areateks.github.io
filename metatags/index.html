@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width" name="viewport">
@@ -9,51 +10,55 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
     <style>
-      input,select,textarea {
-        width: 100%;
-    overflow: auto;
-}</style>
+    input,
+    select,
+    textarea {
+      width: 100%;
+      overflow: auto;
+    }
+    </style>
   </head>
+
   <body>
     <header>
       <h1><a href="..">Areateks</a> &raquo; SEO Metatags Generator</h1>
     </header>
     <main>
-    <form>
-      <p><label for="title">Title</label></p>
-      <p><input id="title" type="text" name="title" placeholder="title" autofocus="" autocomplete="off"></p>
-      <!--minlength="30" maxlength="50" required=""-->
-      <p><label for="description">Description</label></p>
-      <p><textarea id="description" type="text" name="description" placeholder="description" autofocus="" autocomplete="off" rows="5"></textarea></p>
-      <p><label for="date">Date</label></p>
-      <p><input id="date" type="date" name="date" placeholder="description" autofocus="" autocomplete="off"></p>
-      <p><label for="header">Header</label></p>
-      <p><input id="header" type="text" name="header" placeholder="header" autofocus="" autocomplete="off"></p>
-      <p><label for="author">Author</label></p>
-      <p><input id="author" type="text" name="author" placeholder="author" autofocus="" autocomplete="off"></p>
-      <p><label for="lead">Lead</label></p>
-      <p><textarea id="lead" type="text" name="lead" placeholder="lead" autofocus="" autocomplete="off" rows="5"></textarea></p>
-      <p><button type="submit">Buat</button></p>
-    </form>
+      <form>
+        <p><label for="title">Title</label></p>
+        <p><input id="title" type="text" name="title" placeholder="title" autofocus="" autocomplete="off"></p>
+        <!--minlength="30" maxlength="50" required=""-->
+        <p><label for="description">Description</label></p>
+        <p><textarea id="description" type="text" name="description" placeholder="description" autofocus="" autocomplete="off" rows="5"></textarea></p>
+        <p><label for="date">Date</label></p>
+        <p><input id="date" type="date" name="date" placeholder="description" autofocus="" autocomplete="off"></p>
+        <p><label for="header">Header</label></p>
+        <p><input id="header" type="text" name="header" placeholder="header" autofocus="" autocomplete="off"></p>
+        <p><label for="author">Author</label></p>
+        <p><input id="author" type="text" name="author" placeholder="author" autofocus="" autocomplete="off"></p>
+        <p><label for="lead">Lead</label></p>
+        <p><textarea id="lead" type="text" name="lead" placeholder="lead" autofocus="" autocomplete="off" rows="5"></textarea></p>
+        <p><button type="submit">Buat</button></p>
+      </form>
 
 
-    <h2>Google Result</h2>
-    </header>
-    <div id="google">Google result checking</div>
+      <h2>Google Result</h2>
+      </header>
+      <div id="google">Google result checking</div>
 
-    <h2>JSON Result</h2>
-    </header>
-    <pre><code id="json">JSON file result</code></pre>
+      <h2>JSON Result</h2>
+      </header>
+      <pre><code id="json">JSON file result</code></pre>
 
-    <h2>YAML Result</h2>
+      <h2>YAML Result</h2>
 
-    <pre><code id="yaml">YAML file result</code></pre>
+      <pre><code id="yaml">YAML file result</code></pre>
 
-    <h2>HTML Result</h2>
+      <h2>HTML Result</h2>
 
-    <pre><code id="html">HTML file result</code></pre>
+      <pre><code id="html">HTML file result</code></pre>
 
-  </main>
+    </main>
     <script>
     var google = document.getElementById('google');
     var json = document.getElementById('json');
@@ -61,46 +66,56 @@
     var meta = document.getElementById('html');
     var config = q2o(window.location.search);
     if (window.location.search) {
-        var jsonreplace = JSON.stringify(config, null, 2);
-        var jsonresult = jsonreplace.replace(/\+/g, ' ');
-        var title = config.title;
-        var description = config.description;
-        var date = config.date;
-        var header = config.header;
-        var author = config.author;
-        var lead = config.lead;
-        var br = "<br>";
-        var ystart = "---";
-        var ytitle = "title: ";
-        var ydescription = "description: ";
-        var ydate = "date: ";
-        var yheader = "header: ";
-        var yauthor = "author: ";
-        var ylead = "lead: ";
-        var yend = "...";
-        var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yend;
-        var yamlresult = yreplace.replace(/\+/g, ' ');
-        var mtitle = '&lt;title&gt;' + title + '&lt;/title&gt;';
-        var mdescription = '&lt;meta ' + 'content="' + description + '"' + ' name="description">';
-        var mdate = '&lt;meta ' + 'content="' + date + '"' + ' name="date">';
-        var mheader = '&lt;meta ' + 'content="' + header + '"' + ' name="subject">';
-        var mauthor = '&lt;meta ' + 'content="' + author + '"' + ' name="author">';
-        var mlead = '&lt;meta ' + 'content="' + lead + '"' + ' name="lead">';
-        var htmlreplace = mtitle + br + mdescription + br + mdate + br + mheader + br + mauthor + br + mlead;
-        var htmlresult = htmlreplace.replace(/\+/g, ' ');
-        var gtitle = '<p><strong>' + ytitle + '</strong>' + br + br + '<a href="https://google.com/search?q=' + title + '" target="_blank">' + title + '</a></p>';
-        var gdescription = '<p><strong>' + ydescription + '</strong>' + br + br + '<a href="https://google.com/search?q=' + description + '" target="_blank">' + description + '</a></p>';
-        var gdate = '<p><strong>' + ydate + '</strong>' + br + br + '<a href="https://google.com/search?q=' + date + '" target="_blank">' + date + '</a></p>';
-        var gheader = '<p><strong>' + yheader + '</strong>' + br + br + '<a href="https://google.com/search?q=' + header + '" target="_blank">' + header + '</a></p>';
-        var gauthor = '<p><strong>' + yauthor + '</strong>' + br + br + '<a href="https://google.com/search?q=' + author + '" target="_blank">' + author + '</a></p>';
-        var glead = '<p><strong>' + ylead + '</strong>' + br + br + '<a href="https://google.com/search?q=' + lead + '" target="_blank">' + lead + '</a></p>';
-        var greplace = gtitle + gdescription + gdate + gheader + gauthor + glead;
-        var googleresult = greplace.replace(/\+/g, ' ');
-        json.innerHTML = jsonresult;
-        yaml.innerHTML = yamlresult;
-        meta.innerHTML = htmlresult;
-        google.innerHTML = googleresult;
+      var jsonreplace = JSON.stringify(config, null, 2);
+      var jsonresult = jsonreplace.replace(/\+/g, ' ');
+      var title = config.title;
+      var description = config.description;
+      var date = config.date;
+      var header = config.header;
+      var author = config.author;
+      var lead = config.lead;
+      var br = "<br>";
+      var ystart = "---";
+      var ytitle = "title: ";
+      var ydescription = "description: ";
+      var ydate = "date: ";
+      var yheader = "header: ";
+      var yauthor = "author: ";
+      var ylead = "lead: ";
+      var yend = "...";
+      var yreplace = ystart + br + ytitle + title + br + ydescription + description + br + ydate + date + br + yheader + header + br + yauthor + author + br + ylead + lead + br + yend;
+      var yamlresult = yreplace.replace(/\+/g, ' ');
+      var mtitle = '&lt;title&gt;' + title + '&lt;/title&gt;';
+      var mdescription = '&lt;meta ' + 'content="' + description + '"' + ' name="description">';
+      var mdate = '&lt;meta ' + 'content="' + date + '"' + ' name="date">';
+      var mheader = '&lt;meta ' + 'content="' + header + '"' + ' name="subject">';
+      var mauthor = '&lt;meta ' + 'content="' + author + '"' + ' name="author">';
+      var mlead = '&lt;meta ' + 'content="' + lead + '"' + ' name="lead">';
+      var htmlreplace = mtitle + br + mdescription + br + mdate + br + mheader + br + mauthor + br + mlead;
+      var htmlresult = htmlreplace.replace(/\+/g, ' ');
+      var gtitle = '<p><strong>' + ytitle + '</strong>' + br + br + '<a href="https://google.com/search?q=' + title + '" target="_blank">' + title + '</a></p>';
+      var gdescription = '<p><strong>' + ydescription + '</strong>' + br + br + '<a href="https://google.com/search?q=' + description + '" target="_blank">' + description + '</a></p>';
+      var gdate = '<p><strong>' + ydate + '</strong>' + br + br + '<a href="https://google.com/search?q=' + date + '" target="_blank">' + date + '</a></p>';
+      var gheader = '<p><strong>' + yheader + '</strong>' + br + br + '<a href="https://google.com/search?q=' + header + '" target="_blank">' + header + '</a></p>';
+      var gauthor = '<p><strong>' + yauthor + '</strong>' + br + br + '<a href="https://google.com/search?q=' + author + '" target="_blank">' + author + '</a></p>';
+      var glead = '<p><strong>' + ylead + '</strong>' + br + br + '<a href="https://google.com/search?q=' + lead + '" target="_blank">' + lead + '</a></p>';
+      var greplace = gtitle + gdescription + gdate + gheader + gauthor + glead;
+      var googleresult = greplace.replace(/\+/g, ' ');
+      json.innerHTML = jsonresult;
+      yaml.innerHTML = yamlresult;
+      meta.innerHTML = htmlresult;
+      google.innerHTML = googleresult;
     }
     </script>
+    <script src="./f3h.min.js"></script>
+    <script>
+    const f3h = new F3H;
+    const content = document.querySelector('#content');
+    f3h.on('success', response => {
+      document.title = response.title;
+      content.innerHTML = response.querySelector('#content').innerHTML;
+    });
+    </script>
   </body>
+
 </html>
