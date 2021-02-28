@@ -1,0 +1,28 @@
+{
+  "name": "@taufik-nurrohman/query-string-parser",
+  "description": "Convert URL’s query string into JavaScript object.",
+  "version": "1.0.2",
+  "main": "q2o.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/query-string-parser.git"
+  },
+  "keywords": [
+    "query",
+    "string",
+    "parser",
+    "url",
+    "object",
+    "json",
+    "http"
+  ],
+  "author": "Taufik Nurrohman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taufik-nurrohman/query-string-parser/issues"
+  },
+  "homepage": "https://taufik-nurrohman.github.io/query-string-parser"
+}
