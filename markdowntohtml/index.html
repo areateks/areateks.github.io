@@ -80,6 +80,17 @@
       $("section").html(t.val())
     });
     </script>
+    <script src="/f3h.min.js"></script>
+    <script>
+    const f3h = new F3H;
+    const content = document.querySelector('#content');
+    f3h.on('success', response => {
+      document.title = response.title;
+      content.innerHTML = response.querySelector('#content').innerHTML;
+      delete f3h.scripts['q2o', 'qtoo', "header"];
+    });
+    </script>
+
   </body>
 
 </html>
