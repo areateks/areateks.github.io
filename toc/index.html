@@ -109,8 +109,8 @@
       var lowertitle = striptitle.toLowerCase();
       var tocresult = '<li id="from:' + firstnumber + '"."' + secondnumber + '"><a href="#to:' + lowertitle + '">' + headingtitle + '</a> <span class="a:t-o-c"></span></li>';
       var headerresult = '<h2 class="is:t-o-c" id="to:' + lowertitle + '">' + headingtitle + '<a class="a:t-o-c" href="#from:' + firstnumber + '"."' + secondnumber + '"></a></h2>';
-      toc.innerHTML = tocresult;
-      header.innerHTML = headerresult;
+      toc.innerText = tocresult;
+      header.innerText = headerresult;
     }
     </script>
     <script src="./toc.js?v=2"></script>
