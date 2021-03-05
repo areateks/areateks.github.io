@@ -105,7 +105,8 @@
       var heading = config.heading;
       var title = config.title;
       var headingtitle = title.replace(/\+/g, ' ');
-      var striptitle = title.replace(/\+/g, '-');
+      var tanyatitle = title.replace(/\?/g, '');
+      var striptitle = tanyatitle.replace(/\+/g, '-');
       var lowertitle = striptitle.toLowerCase();
       var tocresult = '<li id="from:' + firstnumber + '.' + secondnumber + '"><a href="#to:' + lowertitle + '">' + headingtitle + '</a> <span class="a:t-o-c"></span></li>';
       var headerresult = '<h2 class="is:t-o-c" id="to:' + lowertitle + '">' + headingtitle + '<a class="a:t-o-c" href="#from:' + firstnumber + '.' + secondnumber + '"></a></h2>';
