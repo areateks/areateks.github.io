@@ -60,8 +60,14 @@
     </header>
     <main>
       <form>
-        <p><label for="num">Number of TOC</label></p>
-        <p><input id="num" type="number" name="num" placeholder="1" autofocus="" autocomplete="off"></p>
+<fieldset>
+  <legend>Number of TOC</legend>
+        <p><label for="number">Number</label> <input id="number" type="number" name="number" placeholder="1" autofocus="" autocomplete="off"></p>
+      </fieldset>
+<fieldset>
+  <legend>Heading of TOC</legend>
+        <p><input id="h1" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off"> <label for="h1">H1</label></p>
+      </fieldset>
         <p><button type="submit">Buat</button> <button type="reset">Reset</button></p>
       </form>
 
