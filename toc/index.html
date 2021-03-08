@@ -65,6 +65,10 @@
     <main>
       <form>
         <fieldset>
+          <legend>Canonical URL</legend>
+          <p><label for="url">URL of TOC</label> <input id="url" type="text" name="url" placeholder="https://areateks.github.io/toc" autofocus="" autocomplete="off" required></p>
+        </fieldset>
+        <fieldset>
           <legend>Number of TOC</legend>
           <p><label for="fnum">First</label> <input id="fnum" type="number" name="fnum" placeholder="1" autofocus="" autocomplete="off" value="1" required> <label for="snum">Second</label> <input id="snum" type="number" name="snum" placeholder="1" autofocus="" autocomplete="off" value="1" required></p>
         </fieldset>
@@ -101,26 +105,8 @@
     <footer>
       <p>&#169; 2021 <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a></p>
     </footer>
-    <script>
-    var toc = document.getElementById('toc');
-    var header = document.getElementById('header');
-    var config = q2o(window.location.search);
-    if (window.location.search) {
-      var firstnumber = config.fnum;
-      var secondnumber = config.snum;
-      var heading = config.heading;
-      var title = config.title;
-      var headingtitle = title.replace(/\+/g, ' ');
-      var tanyatitle = title.replace(/\%3F/g, '');
-      var striptitle = tanyatitle.replace(/\+/g, '-');
-      var lowertitle = striptitle.toLowerCase();
-      var tocresult = '<li id="from:' + firstnumber + '.' + secondnumber + '"><a href="#to:' + lowertitle + '">' + headingtitle + '</a> <span class="a:t-o-c"></span></li>';
-      var headerresult = '<h2 class="is:t-o-c" id="to:' + lowertitle + '">' + headingtitle + '<a class="a:t-o-c" href="#from:' + firstnumber + '.' + secondnumber + '"></a></h2>';
-      toc.innerText = tocresult;
-      header.innerText = headerresult;
-    }
-    </script>
-    <script src="./toc.js?v=2"></script>
+
+    <script src="./toc.js?v=3"></script>
   </body>
 
 </html>
