@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>SEO Image Generator</title>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta name='robots' content='noindex,nofollow'>
+    <script src="/q2o.js"></script>
+    <meta name="google-site-verification" content="QsXXmsfxgcDvRyA8tzm9ljr_aKKZwz4UvVEb7GQxQ3s">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <style>
+    pre {
+      white-space: pre-wrap;
+      overflow-x: auto;
+      tab-width: 2;
+    }
+    .select {
+      user-select: all;
+    }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3Y1RXP1YW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K3Y1RXP1YW');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WCN82NQ');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCN82NQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+      <p><mark>Do you like this project? Please <a href='https://paypal.me/nashrullahalifauzi' target='_blank'>support me</a>. Thank you!</mark></p>
+      <h1><a href="..">Areateks</a> &raquo; TOC Generator</h1>
+      <p>This manual TOC generator for all content management system by <a href="mailto:nash.dev@yandex.com">Nashrullah Ali Fauzi</a>.</p>
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Canonical URL</legend>
+          <p><label for="url">URL</label> <input id="url" type="url" name="url" placeholder="https://areateks.github.io/toc" autofocus="" autocomplete="off" required></p>
+        </fieldset>
+        <fieldset>
+          <legend>Number of TOC</legend>
+          <p><label for="fnum">First</label> <input id="fnum" type="number" name="fnum" placeholder="1" autofocus="" autocomplete="off" value="1" required> <label for="snum">Second</label> <input id="snum" type="number" name="snum" placeholder="1" autofocus="" autocomplete="off" value="1" required></p>
+        </fieldset>
+        <fieldset>
+          <legend>Heading of TOC</legend>
+          <p><input id="h1" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h1" required> <label for="h1">H1</label> <input id="h2" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h2" checked> <label for="h2">H2</label> <input id="h3" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h3"> <label for="h3">H3</label> <input id="h4" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h4"> <label for="h4">H4</label> <input id="h5" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h5"> <label for="h5">H5</label> <input id="h6" type="radio" name="heading" placeholder="1" autofocus="" autocomplete="off" value="h6"> <label for="h6">H6</label></p>
+        </fieldset>
+        <fieldset>
+          <legend>Title of TOC</legend>
+          <p><label for="title">Title</label> <input id="title" type="text" name="title" placeholder="Title of heading in article." autofocus="" autocomplete="off" required></p>
+        </fieldset>
+        <fieldset>
+          <legend>Generator Button</legend>
+          <p><button type="submit">Generate</button> <button type="reset">Reset</button></p>
+        </fieldset>
+      </form>
+
+      <fieldset>
+        <legend class='select'>TOC and Heading Result</legend>
+        <pre contenteditable>
+<code class='select'>&lt;details class="t-o-c p" id="t-o-c:1" open&gt;</code>
+<code class='select'>&lt;summary&gt;<span>Tabel Konten</span>&lt;/summary&gt;</code>
+        <code>&lt;ol&gt;</code>
+          <mark class='select'><code id="toc" class="toc">TOC will be generare here.</code></mark>
+        <code>&lt;/ol&gt;</code>
+<code>&lt;/details&gt;</code>
+<mark class="select"><code id="header" class="header">Header will be generate here.</code></mark>
+      </pre>
+      </fieldset>
+      <hr>
+      <p><a href='mailto:nash.dev@yandex.com'><button>Reply via Email</button></a></p>
+
+    </main>
+    <footer>
+      <p>&#169; 2021 <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a></p>
+    </footer>
+
+    <script src="./toc.js?v=3"></script>
+  </body>
+
+</html>
