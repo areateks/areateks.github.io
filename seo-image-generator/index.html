@@ -70,19 +70,15 @@
         </fieldset>
         <fieldset>
           <legend>Title of Image</legend>
-          <p><label for="url">URL</label> <input id="url" type="url" name="url" placeholder="https://areateks.github.io/toc" autofocus="" autocomplete="off" required></p>
+          <p><label for="title">URL</label> <input id="title" type="text" name="title" placeholder="Title of image." autofocus="" autocomplete="off" required></p>
         </fieldset>
         <fieldset>
           <legend>ALT of Image</legend>
-          <p><label for="url">URL</label> <input id="url" type="url" name="url" placeholder="https://areateks.github.io/toc" autofocus="" autocomplete="off" required></p>
-        </fieldset>
-        <fieldset>
-          <legend>Generator Button</legend>
-          <p><button type="submit">Generate</button> <button type="reset">Reset</button></p>
+          <p><label for="alt">URL</label> <input id="alt" type="text" name="alt" placeholder="ALT of image." autofocus="" autocomplete="off" required></p>
         </fieldset>
         <fieldset>
           <legend>Caption Image</legend>
-          <p><label for="url">URL</label> <input id="url" type="url" name="url" placeholder="https://areateks.github.io/toc" autofocus="" autocomplete="off" required></p>
+          <p><label for="caption">URL</label> <input id="caption" type="text" name="caption" placeholder="Caption of image." autofocus="" autocomplete="off" required></p>
         </fieldset>
         <fieldset>
           <legend>Generator Button</legend>
@@ -93,13 +89,7 @@
       <fieldset>
         <legend class='select'>Code Result</legend>
         <pre contenteditable>
-<code class='select'>&lt;details class="t-o-c p" id="t-o-c:1" open&gt;</code>
-<code class='select'>&lt;summary&gt;<span>Tabel Konten</span>&lt;/summary&gt;</code>
-        <code>&lt;ol&gt;</code>
-          <mark class='select'><code id="toc" class="toc">TOC will be generare here.</code></mark>
-        <code>&lt;/ol&gt;</code>
-<code>&lt;/details&gt;</code>
-<mark class="select"><code id="header" class="header">Header will be generate here.</code></mark>
+<code class='img' id='img'></code>
       </pre>
       </fieldset>
       <hr>
@@ -110,7 +100,7 @@
       <p>&#169; 2021 <a href='mailto:nash.dev@yandex.com'>Nashrullah Ali Fauzi</a></p>
     </footer>
 
-    <script src="./toc.js?v=3"></script>
+    <script src="./img.js?v=3"></script>
   </body>
 
 </html>
